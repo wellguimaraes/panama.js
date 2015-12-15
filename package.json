@@ -1,0 +1,21 @@
+{
+  "name": "riotto",
+  "version": "1.0.0",
+  "description": "An event bus for Riot",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Wellington Guimaraes",
+  "license": "MIT",
+  "dependencies": {
+    "riot-observable": "^2.3.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellguimaraes/riotto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wellguimaraes/riotto/issues"
+  },
+  "homepage": "https://github.com/wellguimaraes/riotto#readme"
+}

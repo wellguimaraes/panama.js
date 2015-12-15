@@ -1,0 +1,1 @@
+An event bus for Riot
