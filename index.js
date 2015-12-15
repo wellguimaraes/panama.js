@@ -6,7 +6,7 @@ module.exports = (function () {
     riotto.createActions = function (namespace, actionSet) {
         for (var action in actionSet) {
             if (actionSet.hasOwnProperty(action))
-                actionSet[action] = `${namespace}:${action}`
+                actionSet[action] = namespace + ':' + action;
         }
         return actionSet;
     };
