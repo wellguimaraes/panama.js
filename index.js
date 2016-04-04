@@ -9,16 +9,16 @@ module.exports = (function() {
         
         observable(store);
 
-        this.couple = function(anotherStore) {
+        store.couple = function(anotherStore) {
             anotherStore.apply(this);
             return this;
         }.bind(store);
 
-        this.getState = function() {
+        store.getState = function() {
             return state;
         };
 
-        this.setState = function(changes) {
+        store.setState = function(changes) {
             Object.assign(state, changes);
             this.trigger('update');
         }.bind(store);
