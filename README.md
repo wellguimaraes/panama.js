@@ -8,6 +8,12 @@ A Flux helper for Riot, React or any other UI library.
 ```js
 var riotto = require('riotto');
 
+// Create some namespaced actions
+var actions = riotto.actions('myApp', {
+    something       : 0, // becomes 'myApp:something'
+    somethingElse   : 0  // becomes 'myApp:somethingElse'
+});
+
 var store = riotto
     .createStore()
     .setState({
@@ -16,13 +22,13 @@ var store = riotto
     .couple(function() {
         // event handlers
         
-        this.on('something', function(payload) {
+        this.on(actions.something, function(payload) {
             this.setState({
                 // some state changes
             });
         });
         
-        this.on('somethingElse', function() {
+        this.on(actions.somethingElse, function() {
             this.setState({
                 // some state changes
             });
@@ -31,7 +37,7 @@ var store = riotto
     .couple(require('./anotherHandlerSet'));
     
     // Then you can trigger events
-    store.trigger('something', payload);
+    store.trigger(actions.something, payload);
 
     // And listen to state changes
     store.on('update', function() {
