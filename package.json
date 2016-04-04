@@ -1,6 +1,6 @@
 {
   "name": "riotto",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A Flux helper for Riot, React or any other UI library",
   "main": "index.js",
   "scripts": {},

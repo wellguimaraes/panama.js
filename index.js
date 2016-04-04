@@ -6,7 +6,7 @@ module.exports = (function() {
     riotto.createStore = function() {
         var store = {};
         var state = {};
-        
+
         observable(store);
 
         store.couple = function(anotherStore) {
@@ -21,6 +21,7 @@ module.exports = (function() {
         store.setState = function(changes) {
             Object.assign(state, changes);
             this.trigger('update');
+            return this;
         }.bind(store);
 
         return store;
