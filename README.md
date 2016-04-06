@@ -1,20 +1,20 @@
 # Panama.js
 A simple library for uni-directional dataflow architecture inspired by Flux.
 
-`npm install --save-dev riotto`
+`npm install --save-dev panamajs`
 
 ## Usage
 
 ```js
-var riotto = require('riotto');
+var panama = require('panamajs');
 
 // Create some namespaced actions
-var actions = riotto.actions('myApp', {
+var actions = panama.actions('myApp', {
     something       : 0, // becomes 'myApp:something'
     somethingElse   : 0  // becomes 'myApp:somethingElse'
 });
 
-var store = riotto
+var store = panama
     .createStore()
     .setState({
         // app initial state
