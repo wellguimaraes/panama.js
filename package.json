@@ -1,7 +1,7 @@
 {
-  "name": "riotto",
+  "name": "panama.js",
   "version": "2.0.3",
-  "description": "A Flux helper for Riot, React or any other UI library",
+  "description": "A simple library for uni-directional dataflow architecture inspired by Flux",
   "main": "index.js",
   "scripts": {},
   "author": "Wellington Guimaraes",
@@ -12,10 +12,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wellguimaraes/riotto.git"
+    "url": "git+https://github.com/wellguimaraes/panama.js.git"
   },
   "bugs": {
-    "url": "https://github.com/wellguimaraes/riotto/issues"
+    "url": "https://github.com/wellguimaraes/panama.js/issues"
   },
-  "homepage": "https://github.com/wellguimaraes/riotto#readme"
+  "homepage": "https://github.com/wellguimaraes/panama.js#readme"
 }
