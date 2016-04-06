@@ -1,34 +1,34 @@
 var observable = require('riot-observable');
 
-module.exports = (function() {
-    var riotto = {};
+function PanamaStore() {
+    var state = {};
 
-    riotto.createStore = function() {
-        var store = {};
-        var state = {};
+    observable(this);
 
-        observable(store);
+    this.couple = function(anotherStore) {
+        anotherStore.apply(this);
+        return this;
+    }.bind(this);
 
-        store.couple = function(anotherStore) {
-            anotherStore.apply(this);
-            return this;
-        }.bind(store);
-
-        store.getState = function() {
-            return state;
-        };
-
-        store.setState = function(changes) {
-            Object.assign(state, changes);
-            this.trigger('update');
-            return this;
-        }.bind(store);
-
-        return store;
-
+    this.getState = function() {
+        return state;
     };
 
-    riotto.createActions = function(namespace, actionSet) {
+    this.setState = function(changes) {
+        Object.assign(state, changes);
+        this.trigger('update');
+        return this;
+    }.bind(this);
+
+    return this;
+}
+    
+module.exports = (function() {
+    var panama = {};
+
+    panama.createStore = new PanamaStore();
+
+    panama.createActions = function(namespace, actionSet) {
         for (var action in actionSet) {
             if (actionSet.hasOwnProperty(action))
                 actionSet[action] = namespace + ':' + action;
@@ -40,9 +40,9 @@ module.exports = (function() {
     /**
      * @deprecated
      */
-    riotto.createEventBus = function() {
+    panama.createEventBus = function() {
         return observable({});
     };
 
-    return riotto;
+    return panama;
 })();
