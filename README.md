@@ -1,5 +1,5 @@
 # Riotto
-A Flux helper for Riot, React or any other UI library.
+A simple library for uni-directional dataflow architecture inspired by Flux.
 
 `npm install --save-dev riotto`
 
