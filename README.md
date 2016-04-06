@@ -1,4 +1,4 @@
-# Riotto
+# Panama.js
 A simple library for uni-directional dataflow architecture inspired by Flux.
 
 `npm install --save-dev riotto`
