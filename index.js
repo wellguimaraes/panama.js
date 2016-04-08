@@ -26,7 +26,9 @@ function PanamaStore() {
 module.exports = (function() {
     var panama = {};
 
-    panama.createStore = new PanamaStore();
+    panama.createStore = function() {
+        return new PanamaStore();
+    };
 
     panama.createActions = function(namespace, actionSet) {
         for (var action in actionSet) {
