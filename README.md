@@ -9,7 +9,7 @@ A simple library for uni-directional dataflow architecture inspired by Flux.
 var panama = require('panamajs');
 
 // Create some namespaced actions
-var actions = panama.actions('myApp', {
+var actions = panama.createActions('myApp', {
     something       : 0, // becomes 'myApp:something'
     somethingElse   : 0  // becomes 'myApp:somethingElse'
 });
